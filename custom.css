@@ -1,0 +1,235 @@
+/* google fonts 'Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --primary:#96baff;
+    --secondary: #1DBF73;
+    --secondary-light:rgba(161, 0, 53, 0.8);
+    --secondary-light-2:rgba(161, 0, 53, 0.1);
+    --green:#3ec70b;
+    --white: #fff;
+    --grey:#444;
+    --black:#000;
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: "Lato", sans-serif;
+}
+
+/* Media query for all devices */
+@media all {
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--primary);
+}
+
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    background-color: grey;
+}
+
+.profile-card{
+    position: relative;
+    width: 350px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    background-color: var(--white);
+    z-index: 2;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25rem;
+    background-color: var(--secondary);
+    clip-path: polygon(0 0, 100% 0, 100% 14%, 0 45% );
+    z-index: -1;
+}
+
+.profile-card-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 0.8rem 1rem;
+    color: #fff;
+}
+
+.profile-card-top i{
+    cursor: pointer;
+}
+
+
+.profile-card-top div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 3.5rem;
+}
+
+.profile-card-middle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.profile-pic{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url(./images/William.jpeg);
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    box-shadow: 0 0 1px 1px var(--primary);
+}
+
+.profile-pic i {
+    position: absolute;
+    right: 0;
+    top: 6.5rem;
+    font-size: 1.2rem;
+    color: var(--green);
+}
+
+.profile-card-middle h1{
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+    color: var(--secondary);
+}
+
+.profile-card-middle h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+.social-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--grey);
+}
+
+.social-data div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-data div h5 {
+    color: var(--secondary);
+}
+
+.social-data div span{
+    color: var(--grey);
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+
+.skills-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: .5rem;
+}
+
+.skills-list  li {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills-list  li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--grey);
+    cursor: pointer;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid var(--grey);
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out, 
+    color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.skills-list  li a:hover {
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    background-color: var(--secondary-light-2);
+}
+
+.social-icons {
+    display: flex ;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+.social-icons div {
+    border: 1px solid var(--secondary);
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--secondary);
+    transition: background-color 0.3s ease-in-out, 
+    color 0.3s ease-in-out;
+}
+
+.social-icons div:hover {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
